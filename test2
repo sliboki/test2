@@ -1,0 +1,17 @@
+// 定义一个函数，用于完成同步操作  
+function syncOperation() {  
+  // 要执行的同步操作  
+  console.log("正在进行同步操作...");
+
+  // 等待 1 秒钟，然后进行异步操作  
+  setTimeout(() => {  
+    console.log("正在进行异步操作...");  
+    fetch("https://example.com/async-operation")  
+      .then(response => response.text())  
+      .then(text => console.log(text))  
+      .catch(error => console.error(error));  
+  }, 1000);  
+}
+
+// 调用 syncOperation 函数  
+syncOperation();  
